@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Öğrenci Yönetim Sistemi</title>
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		  crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<!-- Brand -->
+	<a class="navbar-brand" href="#">Öğrenci Yönetim Sistemi</a>
+
+	<!-- Toggler/collapsible Button -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<!-- Navbar links -->
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" th:href="@{/students}">Öğrenci Yönetim</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<br>
+<br>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="card">
+				<h1 class="card-header text-center">Öğrenci Güncelle</h1>
+				<div class="card-body">
+					<form th:action="@{/students/{id}(id=${student.id})}" th:object="${student}" method="POST">
+						<div class="form-group">
+							<label>Öğrenci İsim</label>
+							<input type="text" name="firstName" th:field="*{firstName}" class="form-control" placeholder="Öğrenci İsmini Giriniz"/>
+						</div>
+						<div class="form-group">
+							<label>Öğrenci Soyisim</label>
+							<input type="text" name="lastName" th:field="*{lastName}" class="form-control" placeholder="Öğrenci Soyismini Giriniz"/>
+						</div>
+						<div class="form-group">
+							<label>Öğrenci Email</label>
+							<input type="text" name="email" th:field="*{email}" class="form-control" placeholder="Öğrenci Emailini Giriniz"/>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Güncelle</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

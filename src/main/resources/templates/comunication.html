@@ -11,6 +11,14 @@
         .navbar-brand {
             margin-left: 15px; /* Navbar markası sol tarafa kaydırıldı */
         }
+        .sol-orta {
+            display: flex;
+            align-items: center;
+        }
+        .resim {
+            margin-right: auto;
+            margin-left: 0;
+        }
     </style>
 </head>
 <body>
@@ -19,6 +27,10 @@
 
 <div class="container mt-4">
     <div class="row">
+        <div class="col-md-6 sol-orta">
+            <!-- Resim alanı -->
+            <img src="/1.png" alt="Resim" class="img-fluid resim">
+        </div>
         <div class="col-md-6">
             <!-- İletişim Formu -->
             <h2>İletişim Formu</h2>
@@ -45,10 +57,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Gönder</button>
             </form>
-        </div>
-        <div class="col-md-6">
-            <!-- Resim alanı -->
-            <img src="/your_image.jpg" alt="Resim" class="img-fluid">
         </div>
     </div>
 </div>

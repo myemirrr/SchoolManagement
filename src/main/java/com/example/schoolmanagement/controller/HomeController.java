@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @GetMapping("/index")
-    public String index() {
+    public String index()
+    {
         return "index"; // Döndürülen değer, dönülecek view adını belirtir.
     }
 }

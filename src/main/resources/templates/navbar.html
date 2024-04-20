@@ -8,33 +8,39 @@
     </button>
 
     <!-- Navbar links -->
-    <div class=" navbar-nav ml-auto" id="collapsibleNavbar">
-        <!-- Sol köşe için Login ve Register linkleri -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <!-- Sol köşe için diğer menü linkleri -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="/index">Ana Sayfa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link" href="/students">Öğrenci Yönetim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/teachers">Öğretmen Yönetim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/news">Haberler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/comunication">İletişim</a>
             </li>
         </ul>
-        <!-- Sağ köşe için diğer menü linkleri -->
-        <ul class="collapse navbar-collapse">
+        <!-- Sağ köşe için Login ve Register linkleri -->
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/templates/index}">Ana Sayfa</a>
+                <a class="nav-link" href="/login">Giriş Yap</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/students}">Öğrenci Yönetim</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/teachers}">Öğretmen Yönetim</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/news}">Haberler</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/comunication}">İletişim</a>
+                <a class="nav-link" href="/register">Kayıt Ol</a>
             </li>
         </ul>
     </div>
 </nav>
+
+<style>
+    .navbar-nav > li > .nav-link:hover {
+        background-color: #00779b;
+    }
+</style>

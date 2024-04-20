@@ -66,7 +66,7 @@ public class StudentController {
         return "redirect:/students";
     }
 
-    // handler method to handle delete student request
+
 
     @GetMapping("/students/{id}")
     public String deleteStudent(@PathVariable Long id) {

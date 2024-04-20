@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğretmen Yönetim Sistemi</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+
+<div class="container">
+    <div class="row">
+        <h2> Öğretmen Listesi </h2>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <a th:href="@{/teachers/new}" class="btn btn-primary btn-sm mb-3"> Öğretmen Ekle</a>
+        </div>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th> Fotoğraf </th>
+            <th> Öğretmen İsim</th>
+            <th> Öğretmen Soyisim </th>
+            <th> Öğretmen Email </th>
+            <th> Öğretmen CV </th>
+            <th> İşlem </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="teacher: ${teachers}">
+            <td>
+                <img th:src="${teacher.photoUrl}" style="max-width: 100px; max-height: 100px;">
+            </td>
+            <td th:text="${teacher.firstName}"></td>
+            <td th:text="${teacher.lastName}"></td>
+            <td th:text="${teacher.email}"></td>
+            <td>
+                <a th:href="@{${teacher.cvUrl}}" target="_blank">CV Görüntüle</a>
+            </td>
+            <td>
+                <a th:href="@{/teachers/edit/{id}(id=${teacher.id})}"
+                   class="btn btn-primary">Güncelle</a>
+
+                <a th:href="@{/teachers/{id}(id=${teacher.id})}"
+                   class="btn btn-danger">Sil</a>
+
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+</body>
+
+</html>

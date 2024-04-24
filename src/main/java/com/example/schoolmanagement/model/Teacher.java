@@ -1,7 +1,9 @@
 package com.example.schoolmanagement.model;
 
 import com.example.schoolmanagement.model.Role;
+import jakarta.persistence.Table;
 
+@Table(name = "teachers")
 public class Teacher {
     private String firstName;
     private String lastName;

@@ -1,13 +1,34 @@
-
 package com.example.schoolmanagement.model;
-public enum Role {
-    OGRENCI(1),
-    OGRETMEN(2),
-    ADMIN(0);
+import jakarta.persistence.*;
 
-    private final int value;
+@Entity
+@Table(name = "roles")
+public class Role {
 
-    Role(int value) {
-        this.value = value;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+
+    public Role() {
+
+    }
+
+    public Role(String name) {
+        super();
+        this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:utext="'Okul Yönetim Sistemi  ' "></title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+
+    <style>
+        .odev-kutusu {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .odev-baslik {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .odev-detay {
+            color: #555;
+        }
+        .sol-orta {
+            display: flex;
+            align-items: center;
+        }
+        .resim {
+            margin-right: 20px;
+            margin-left: 0;
+            max-width: 100%;
+            height: auto;
+        }
+        .iletisim-formu {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default border-radius-0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-uppercase t-small-bold text-primary" th:href="@{/teacher/home}">Teacher Student Crud</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="text t-small" th:href="@{/teacher/teachers}">Öğretmen Yönetimi</a></li>
+                    <li><a class="text t-small" th:href="@{/teacher/students}">Öğrenci Yönetimi</a></li>
+                    <li><a class="text t-small" >İletişime Geç</a></li>
+                    <li><a class="text t-small" th:href="@{/teacher/homeworks}">Ödev Tanımla</a></li>
+                    <li><a class="text t-small" href="https://gmail.com">Mail Adresini Kontrol Et</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="text-danger" th:href="@{/logout}"><i class="fa fa-sign-out-alt"></i>&nbsp;Çıkış Yap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <button class="btn btn-primary btn-lg "style=" margin-top: 3px;margin-bottom: 20px">Yeni Ödev Ekle</button>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="odev-kutusu">
+                    <div class="odev-baslik">Ödev 1</div>
+                    <div class="odev-detay">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                    </div>
+                    <div class="odev-butonlar">
+                        <button class="btn btn-danger">Sil</button>
+                        <button class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>            <div class="col-md-4">
+            <div class="odev-kutusu">
+                <div class="odev-baslik">Ödev 1</div>
+                <div class="odev-detay">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus felis vel massa convallis, et condimentum neque vehicula. Phasellus viverra purus eu suscipit lacinia.
+                </div>
+                <div class="odev-butonlar">
+                    <button class="btn btn-danger">Sil</button>
+                    <button class="btn btn-warning">Güncelle</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
